@@ -1,15 +1,151 @@
+@import url("https://fonts.googleapis.com/css?family=Source+Code+Pro");
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: monospace;
+  background-color: black;
 }
-/* #nav-bar {
+
+li {
+  list-style: none;
+}
+
+nav,
+main > section {
+  overflow: auto;
+}
+
+main > section,
+main footer {
+  min-height: 100vh;
+}
+
+#nav-bar {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
+  align-items: baseline;
+  padding: 1em;
+  background-color: #222222;
+  border-radius: 0 0 20px 20px;
+}
+
+#nav-bar a {
+  text-decoration: none;
+  color: #39ff14;
+}
+
+#nav-bar a:hover {
+  color: whitesmoke;
+}
+
+#nav-bar ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 0;
+  margin: 10px 20px;
+}
+
+#nav-bar li {
+  display: block;
+  padding: 0px 50px;
+  margin: 1px;
+  font-size: 1.2em;
+}
+
+#home {
+  background-image: url(images/home-image.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
-} */
-#nav-bar > ul {
+}
+
+#home h1 {
+  font-size: 3em;
+  border-right: solid 3px #39ff14;
+  white-space: nowrap;
+  overflow: hidden;
+  color: #39ff14;
+  margin: 0 auto;
+  animation: animated-text 4s steps(29, end) 1s 1 normal both,
+    animated-cursor 600ms steps(29, end) infinite;
+}
+
+@keyframes animated-text {
+  from {
+    width: 0;
+  }
+  to {
+    width: 472px;
+  }
+}
+
+@keyframes animated-cursor {
+  from {
+    border-right-color: rgba(0, 255, 0, 0.75);
+  }
+  to {
+    border-right-color: transparent;
+  }
+}
+
+#adobe {
+  background-color: #222222;
   display: flex;
-  justify-content: space-between;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+#adobe > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 55%;
+  background-color: #555555;
+  padding: 20px;
+  font-size: 1.5em;
+  border-radius: 20px;
+}
+
+#img-div {
+  display: flex;
+}
+
+#adobe img {
+  width: 70%;
+}
+
+#sony {
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #ffffff;
+}
+
+#south-korea {
+  background-color: violet;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#yahoo {
+  background-color: yellow;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#contact {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
   align-items: center;
 }
